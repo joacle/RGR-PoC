@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/joacle/RGR-PoC#readme",
   "dependencies": {
-    "express": "^4.14.1"
+    "express": "^4.14.1",
+    "kerberos": "0.0.22",
+    "mongodb": "^2.2.24"
   },
   "devDependencies": {
     "babel-cli": "^6.23.0",

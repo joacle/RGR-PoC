@@ -9,12 +9,8 @@ let app = express();
 
 app.use(express.static('public'));
 
-let db;
-
-MongoClient.connect(MONGO_URL, (err, database) => {
-    if (err) throw err;
-
-    db = database;
+(async () => {
+    let db = await MongoClient.connect(MONGO_URL);
 
     app.use('/graphql', GraphQLHTTP({
         schema: schema(db),
@@ -22,5 +18,4 @@ MongoClient.connect(MONGO_URL, (err, database) => {
     }))
 
     app.listen(3000, () => console.log('Listening on port 3000'));
-
-});
+})();

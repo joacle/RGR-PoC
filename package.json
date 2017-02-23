@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "babel-node server.js --presets es2015,stage-2",
+    "start": "babel-node server.js --presets es2015,stage-0,stage-2",
     "auto-start": "nodemon --exec \"npm start\""
   },
   "repository": {
@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/joacle/RGR-PoC#readme",
   "dependencies": {
+    "babel-preset-stage-0": "^6.22.0",
     "events": "^1.1.1",
     "express": "^4.14.1",
     "express-graphql": "^0.6.3",
